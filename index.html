@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home - SynthClient</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+        margin: 0;
+        vertical-align: baseline;
+        background: transparent;
+        box-sizing: border-box
+    }
+
+/* Sets the default settings of the page */
+body, html {
+  height: 150%;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.625;
+  font-family: Nunito !important;
+  text-align: center;
+  font-weight: bold;
+  background-image: url('background.gif');
+  background-attachment: scroll;
+  background-position:top;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-color: rgb(16, 15, 16);
+  scroll-behavior: smooth;
+}
+
+/* Centers element horizontally */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scrollbar back color */
+::-webkit-scrollbar-track {
+  background: rgb(12, 12, 12);
+}
+ 
+/* Scrollbar color */
+::-webkit-scrollbar-thumb {
+  background: rgb(31, 31, 31);
+}
+
+/* Scrollbar color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(73, 73, 73);
+}
+
+/* Tab links style */
+.tablink {
+  background-color: rgba(26, 26, 26, 0);
+  color: rgb(255, 255, 255);
+  float: right;
+  border: none;
+  cursor: pointer;
+  padding: 0.8% 0.9%;
+  font-size: 17px;
+  opacity: 0.6;
+  position: relative;
+  right: 2%;
+  transition: 0.3s;
+}
+.tablink:hover {
+  opacity: 1;
+}
+
+/* Gradient button style */
+.gradbtn{
+  background-color: #92235b;
+  background-image: linear-gradient(to bottom right, rgb(192, 79, 98), rgb(132, 76, 185));
+  opacity: 1; 
+  right: 0%; 
+  float: none;
+  border: none;
+  cursor: pointer;
+  padding: 1% 3%;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
+  border-radius: 4px;
+  position: relative;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.gradbtn:hover {
+  opacity: 1;
+}
+
+/* Main text on page style */
+.tabcontent {
+  color: rgb(179, 179, 179);
+  display: none;
+  padding: 5% 1%;
+  position: relative;
+  top: 10vh;
+  font-size: 80px;
+}
+
+/* Default panel style */
+.panel {
+  background-color: rgb(12, 12, 12);
+  border: none;
+  outline-color: rgb(31, 31, 31);
+  outline-style: solid;
+  outline-width: 4px;
+  font-size: 30px;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 2%;
+  float:none;
+}
+
+/* Futher style */
+.bottom {
+  background-color: rgb(12, 12, 12);
+  border: none;
+  outline-color: rgb(31, 31, 31);
+  outline-style: solid;
+  outline-width: 4px;
+  color: #777777;
+  float:none;
+  position: absolute;
+  bottom: -150%;
+  left: 0%;
+  right: 0%;
+  display: block;
+  text-align: right;
+  font-size: 1.8vh;
+  font-weight: normal;
+}
+
+/* Slide In animation */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+  /* Calls the slideInFromTop animation */
+div {  
+  animation: 0.8s ease-out 0s 1 slideInFromTop;
+}
+</style>
+</head>
+<body>
+
+  <div class="panel" style="height:5vh;">
+    <a href="../html/index.html" style="color:white; text-decoration: none;">SynthClient</a>
+      <button class="tablink" onclick="openPage('Contact', this, '../contact.html')">Contact</button>
+      <button class="tablink" onclick="openPage('Download', this, '../download.html')">Download</button>
+      <button class="tablink" onclick="openPage('About', this, '../about.html')">About</button>
+      <button class="tablink" onclick="openPage('Home', this)" id="defaultOpen">Home</button>
+  </div>
+
+<div id="Home" class="tabcontent" class="center">
+  <b><font style="color: #ffffff;">SynthClient</font></b>
+    <div style="position:relative; bottom:5vh;"><p><font size="50px">PvP based Minecraft client.</font></p></div>
+      <button class="gradbtn" style="bottom: 10vh; letter-spacing: 1px;">download</button>
+</div>
+
+<div id="About"></div>
+
+<div style="position:relative;bottom:-18%;height:400px;background-color:rgb(12, 12, 12);outline-style:solid;outline-color:rgb(31, 31, 31);outline-width:4px"></div>
+
+<div class="bottom"><div style="position:relative; left: -2%;">
+  © 2022 Copyright | Made with <font style="color: rgb(148, 0, 0);"> &hearts;  </font> by Nahciak</div></div>
+
+
+<script>
+function openPage(pageName,elmnt,url) {
+  var i, tablinks;
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.opacity = 1;
+  if(url != null){
+    window.location.replace(url); }
+  else{
+    url = "../" }
+}
+// Gets the element with id="defaultOpen" and clicks on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
