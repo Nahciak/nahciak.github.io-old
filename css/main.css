@@ -14,13 +14,12 @@ body, html {
   font-family: Nunito !important;
   text-align: center;
   font-weight: bold;
-  background-image: url('../images/background.gif');
+  background-image: url('background.gif');
   background-attachment: scroll;
   background-position:top;
   background-repeat: no-repeat;
   background-size:contain;
   background-color: rgb(16, 15, 16);
-  scroll-behavior: smooth;
 }
 
 /* Centers element horizontally */
@@ -45,8 +44,6 @@ body, html {
 ::-webkit-scrollbar-thumb {
   background: rgb(31, 31, 31);
 }
-
-/* Scrollbar color on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(73, 73, 73);
 }
