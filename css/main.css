@@ -16,7 +16,7 @@ body, html {
   font-family: Nunito !important;
   text-align: center;
   font-weight: bold;
-  background-image: url('background.gif');
+  background-image: url('../images/background.gif');
   background-attachment: scroll;
   background-position:top;
   background-repeat: no-repeat;
